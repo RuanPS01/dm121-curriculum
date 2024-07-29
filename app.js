@@ -17,7 +17,7 @@ function showHome() {
     window.location.href = "/index.html";
 }
 
-window.onload = async function loadData() {
+async function loadData() {
     try {
         const response = await fetch('/data.json');
         const jsonData = await response.json();
@@ -41,5 +41,18 @@ window.onload = async function loadData() {
 
     } catch (erro) {
         console.error('Erro ao carregar o JSON:', erro);
+    }
+}
+
+
+function isMobile() {
+    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+}
+
+window.onload = function onLoad() {
+    if (isMobile()) {
+        document.body.innerHTML = '<h2>Por enquanto este site não funciona no modo mobile. Por favor, acesse este site em um computador.<br><br> Att. Ruan Patrick de Souza</h2>';
+    } else {
+        loadData();
     }
 }
