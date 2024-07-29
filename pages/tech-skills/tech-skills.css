@@ -25,6 +25,7 @@
     padding: 2% 0% 0% 2%;
     justify-content: space-between;
 }
+
 #container {
     gap: 20px;
     display: flex;
@@ -33,28 +34,6 @@
     align-items: start;
     flex-direction: row;
     justify-content: start;
-}
-
-#smallProfileImage {
-    top: 2vh;
-    right: 2vh;
-    width: 8vh;
-    height: 8vh;
-    position: fixed;
-    object-fit: cover;
-    border-radius: 30vw;
-    border: 1px solid white;
-}
-
-#leftPanel {
-    gap: 20px;
-    width: 7vw;
-    height: 100%;
-    display: flex;
-    position: fixed;
-    align-items: start;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .skillCard {
@@ -89,17 +68,7 @@
     padding: 0px 20px;
 }
 
-.copyButton {
-    gap: 10px;
-    display: flex;
-    cursor: pointer;
-    font-size: 1.2vw;
-    padding: 0px 15px;
-    width: fit-content;
-    height: fit-content;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .skillCardDot {
     width: 40px;
@@ -107,6 +76,7 @@
     border-radius: 50%;
     background-color: #ffd500;
 }
+
 .skillCardEmptyDot {
     width: 38px;
     height: 38px;

@@ -25,6 +25,7 @@
     padding: 2% 0% 0% 2%;
     justify-content: space-between;
 }
+
 #container {
     width: 90%;
     gap: 20px;
@@ -33,28 +34,6 @@
     align-items: start;
     flex-direction: column;
     justify-content: start;
-}
-
-#smallProfileImage {
-    top: 2vh;
-    right: 2vh;
-    width: 8vh;
-    height: 8vh;
-    position: fixed;
-    object-fit: cover;
-    border-radius: 30vw;
-    border: 1px solid white;
-}
-
-#leftPanel {
-    gap: 20px;
-    width: 7vw;
-    height: 100%;
-    display: flex;
-    position: fixed;
-    align-items: start;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .card {
@@ -76,35 +55,16 @@
     padding: 10px 20px 10px 20px;
 }
 
-.cardFooter {
-    width: 100%;
-    display: flex;
-    height: fit-content;
-    align-items: center;
-    flex-direction: row;
-    background-color: #1b1b1b;
-    justify-content: space-between;
-}
-
-.copyButton {
-    gap: 10px;
-    display: flex;
-    cursor: pointer;
-    font-size: 1.2vw;
-    padding: 0px 15px;
-    width: fit-content;
-    height: fit-content;
-    align-items: center;
-    justify-content: center;
-}
 
 .labelCard {
     width: 100%;
+    height: 100%;
     text-align: end;
+    align-content: center;
     font-size: 1.2vw;
     line-height: 30%;
     padding-right: 20px;
-    background-color: #111111;
+
 }
 
 .itemImage {
@@ -114,8 +74,8 @@
 }
 
 .techIcon {
-    object-fit: cover;
-    border-radius: 1vh;
+    object-fit: contain;
+    margin-left: 4px;
     width: 4vh;
     height: 4vh;
 }

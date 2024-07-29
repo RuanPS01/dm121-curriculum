@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="./tech-skills.css">
+    <script src="/app.js" type="text/javascript" defer></script>
+    <link href="https://css.gg/css" rel="stylesheet" />
     <script src="./tech-skills.js" type="text/javascript" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habilidades técnicas</title>
@@ -13,43 +15,43 @@
 <body>
     <main id="personalData">
         <div id="leftPanel">
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/personal-data/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-user"></i>
             </button>
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/experiences/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-work-alt"></i>
             </button>
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/academic-life/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-pen"></i>
             </button>
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/projects/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-album"></i>
             </button>
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/tech-skills/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-card-diamonds"></i>
             </button>
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/extra-skills/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-card-hearts"></i>
             </button>
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/tech-map/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-display-grid"></i>
             </button>
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/hobbies/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-games"></i>
             </button>
         </div>
-        <img id="smallProfileImage" />
+        <img id="smallProfileImage" src="" />
         <div id="content">
             <button id="backButton" onclick="showHome()" style="width: fit-content;">
-                <img src="assets/curriculum/images/profile.png" />
+                <span class="line-md--arrow-left-circle"></span>
                 <p>Voltar</p>
             </button>
             <section>
@@ -58,148 +60,11 @@
                 </div>
 
                 <div id="container">
-                    <div class="skillCard">
+                    <div id="skillCardTemplate" class="skillCard">
                         <div class="skillCardContent">
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                            <div class="skillCardEmptyDot"></div>
                         </div>
                         <div class="skillCardFooter">
-                            <p>Nome Completo</p>
-                        </div>
-                    </div>
-                    <div class="skillCard">
-                        <div class="skillCardContent">
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                        </div>
-                        <div class="skillCardFooter">
-                            <p>Nome Completo</p>
-                        </div>
-                    </div>
-                    <div class="skillCard">
-                        <div class="skillCardContent">
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                        </div>
-                        <div class="skillCardFooter">
-                            <p>Nome Completo</p>
-                        </div>
-                    </div>
-                    <div class="skillCard">
-                        <div class="skillCardContent">
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                        </div>
-                        <div class="skillCardFooter">
-                            <p>Nome Completo</p>
-                        </div>
-                    </div>
-                    <div class="skillCard">
-                        <div class="skillCardContent">
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                        </div>
-                        <div class="skillCardFooter">
-                            <p>Nome Completo</p>
-                        </div>
-                    </div>
-                    <div class="skillCard">
-                        <div class="skillCardContent">
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                        </div>
-                        <div class="skillCardFooter">
-                            <p>Nome Completo</p>
-                        </div>
-                    </div>
-                    <div class="skillCard">
-                        <div class="skillCardContent">
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                        </div>
-                        <div class="skillCardFooter">
-                            <p>Nome Completo</p>
-                        </div>
-                    </div>
-                    <div class="skillCard">
-                        <div class="skillCardContent">
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                        </div>
-                        <div class="skillCardFooter">
-                            <p>Nome Completo</p>
-                        </div>
-                    </div>
-                    <div class="skillCard">
-                        <div class="skillCardContent">
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                        </div>
-                        <div class="skillCardFooter">
-                            <p>Nome Completo</p>
-                        </div>
-                    </div>
-                    <div class="skillCard">
-                        <div class="skillCardContent">
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                        </div>
-                        <div class="skillCardFooter">
-                            <p>Nome Completo</p>
-                        </div>
-                    </div>
-                    <div class="skillCard">
-                        <div class="skillCardContent">
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                        </div>
-                        <div class="skillCardFooter">
-                            <p>Nome Completo</p>
-                        </div>
-                    </div>
-                    <div class="skillCard">
-                        <div class="skillCardContent">
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                            <div class="skillCardEmptyDot"></div>
-                        </div>
-                        <div class="skillCardFooter">
-                            <p>Nome Completo</p>
+                            <p>{{name}}</p>
                         </div>
                     </div>
                 </div>

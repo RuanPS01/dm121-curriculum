@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="./extra-skills.css">
+    <script src="/app.js" type="text/javascript" defer></script>
+    <link href="https://css.gg/css" rel="stylesheet" />
     <script src="./extra-skills.js" type="text/javascript" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habilidades extras</title>
@@ -13,43 +15,43 @@
 <body>
     <main id="extraSkills">
         <div id="leftPanel">
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/personal-data/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-user"></i>
             </button>
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/experiences/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-work-alt"></i>
             </button>
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/academic-life/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-pen"></i>
             </button>
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/projects/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-album"></i>
             </button>
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/tech-skills/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-card-diamonds"></i>
             </button>
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/extra-skills/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-card-hearts"></i>
             </button>
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/tech-map/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-display-grid"></i>
             </button>
-            <button id="backButton" onclick="showHome()"
+            <button onclick="goTo('/pages/hobbies/index.html')"
                 style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
-                <img src="assets/curriculum/images/profile.png" />
+                <i class="gg-games"></i>
             </button>
         </div>
-        <img id="smallProfileImage" />
+        <img id="smallProfileImage" src="" />
         <div id="content">
             <button id="backButton" onclick="showHome()" style="width: fit-content;">
-                <img src="assets/curriculum/images/profile.png" />
+                <span class="line-md--arrow-left-circle"></span>
                 <p>Voltar</p>
             </button>
             <section>
@@ -60,37 +62,19 @@
                 <div id="container">
                     <div class="card">
                         <div class="cardContent">
-                            <h3>Lorem Ipsum</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard.</p>
+                            <h3>{{name}}</h3>
+                            <p>{{description}}</p>
                         </div>
                         <div class="cardFooter">
                             <span class="copyButton">
-                                <img src="assets/curriculum/images/profile.png" />
+                                <i class="gg-copy" style="scale: 0.6"></i>
                                 <a>Copiar</a>
                             </span>
                             <div class="labelCard">
-                                <p>Nome Completo</p>
+                                <p>{{type}}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="cardContent">
-                            <h3>Lorem Ipsum</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard.</p>
-                        </div>
-                        <div class="cardFooter">
-                            <span class="copyButton">
-                                <img src="assets/curriculum/images/profile.png" />
-                                <a>Copiar</a>
-                            </span>
-                            <div class="labelCard">
-                                <p>Nome Completo</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </section>
         </div>

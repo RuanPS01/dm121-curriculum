@@ -2,9 +2,10 @@
 <html lang="pt-br">
 
 <head>
-    <title>Document</title>
+    <title>Ruan Patrick</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="app.js" type="text/javascript" defer></script>
+    <link href="https://css.gg/css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,54 +19,87 @@
 <body>
     <div class="backgroundDiv"></div>
     <main id="home">
-        <h1>Lorem Ipsum</h1>
-        <div class="centerPanel">
+        <header>
+            <div id="leftDivisionHeader">
+                <a id="github" class="line-md--github-loop" href="" target="blank"></a>
+            </div>
+            <h1>{{name}}</h1>
+            <div id="rightDivisionHeader">
+                <a id="linkedin" class="line-md--linkedin" href="" target="blank"></a>
+            </div>
+        </header>
+        <div class=" centerPanel">
             <div class="panelColumn">
                 <button onclick="goTo('/pages/personal-data/index.html')" style="margin-right: -70px;">
-                    <img src="assets/curriculum/images/icon.png" />
+                    <i class="gg-user"></i>
                     <p>Dados Pessoais</p>
                 </button>
                 <button onclick="goTo('/pages/experiences/index.html')">
-                    <img src="assets/curriculum/images/icon.png" />
+                    <i class="gg-work-alt"></i>
                     <p>Experiência</p>
                 </button>
                 <button onclick="goTo('/pages/academic-life/index.html')">
-                    <img src="assets/curriculum/images/icon.png" />
+                    <i class="gg-pen"></i>
                     <p>Vida acadêmica</p>
                 </button>
                 <button onclick="goTo('/pages/projects/index.html')" style="margin-right: -80px;">
-                    <img src="assets/curriculum/images/icon.png" />
+                    <i class="gg-album"></i>
                     <p>Projetos</p>
                 </button>
             </div>
-            <img id="profileImage" src="assets/curriculum/images/profile.png" />
+            <img id="profileImage" src="" />
             <div class="panelColumn">
                 <button onclick="goTo('/pages/tech-skills/index.html')" style="margin-left: -70px;">
                     <p>Habilidades técnicas</p>
-                    <img src="assets/curriculum/images/icon.png" />
+                    <i class="gg-card-diamonds"></i>
                 </button>
                 <button onclick="goTo('/pages/extra-skills/index.html')">
                     <p>Habilidades extras</p>
-                    <img src="assets/curriculum/images/icon.png" />
+                    <i class="gg-card-hearts"></i>
                 </button>
                 <button onclick="goTo('/pages/tech-map/index.html')">
                     <p>Mapa de tecnologias</p>
-                    <img src="assets/curriculum/images/icon.png" />
+                    <i class="gg-display-grid"></i>
                 </button>
                 <button onclick="goTo('/pages/hobbies/index.html')" style="margin-left: -80px;">
-                    <p>Hobbies</p>
-                    <img src="assets/curriculum/images/icon.png" />
+                    <p>Passa-tempos</p>
+                    <i class="gg-games"></i>
                 </button>
 
             </div>
         </div>
         <h2 style="margin-top: 10vh;">Viu tudo aí em cima? Vamos conversar então</h2>
-        <button onclick="showPersonalData()">
-            <p>Hobbies</p>
-            <img src="assets/curriculum/images/icon.png" />
+        <button onclick="sendMessageDialog.showModal()">
+            <p>Enviar uma mensagem</p>
+            <i class="gg-mail"></i>
         </button>
         <p>-</p>
     </main>
+    <dialog id="sendMessageDialog">
+        <main id="dialogContent">
+            <span class="ion--logo-whatsapp"></span>
+            <h2>Vamos conversar?</h2>
+            <p>Você será redirecionado para o Whatsapp. Escreva sua mensagem e clique em enviar. Respondo assím que
+                possível. Fique a vontade!</p>
+            <form onsubmit="sendMessage(); event.preventDefault();">
+                <label for="name">Seu nome:</label>
+                <input type="text" id="name" name="name">
+                <label for="message">Sua mensagem:</label>
+                <textarea id="message" name="message"></textarea>
+                <footer>
+                    <button onclick="sendMessageDialog.close(); event.stopPropagation(); return false;">
+                        Fechar
+                        <i class="gg-close-o"></i>
+                    </button>
+                    <button type="submit">
+                        Enviar
+                        <i class="gg-mail"></i>
+                    </button>
+                </footer>
+            </form>
+
+        </main>
+    </dialog>
 </body>
 
 </html>
